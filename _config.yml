@@ -1,5 +1,6 @@
 title: krek-os dot com
 url: "https://krek-os.github.io"
+theme: minimal-mistakes-jekyll
 baseurl: ""
 plugins:
   - jekyll-feed

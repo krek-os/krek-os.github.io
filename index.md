@@ -2,7 +2,6 @@
 layout: home
 title: "Krek-OS"
 subtitle: "Developer"
-theme: minimal-mistakes-jekyll
 ---
 
 Hey, test.
