@@ -11,4 +11,5 @@ group :jekyll_plugins do
   gem "jekyll-responsive-image"
   gem "jekyll-admin"
   gem "jekyll-toc"
+  gem "minimal-mistakes-jekyll"
 end
