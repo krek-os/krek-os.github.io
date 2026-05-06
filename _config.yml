@@ -10,6 +10,5 @@ plugins:
   - jekyll-seo-tag
   - jekyll-redirect-from
   - jekyll-imagemagick
-  - jekyll-responsive-image
   - jekyll-toc
   - jekyll-admin
