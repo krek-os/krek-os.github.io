@@ -1,6 +1,5 @@
 source "https://rubygems.org"
 
-gem "jekyll-theme-minimal-mistakes"
 gem "webrick"
 
 group :jekyll_plugins do
