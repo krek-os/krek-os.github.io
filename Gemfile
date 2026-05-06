@@ -3,6 +3,9 @@ source "https://rubygems.org"
 gem "webrick"
 
 group :jekyll_plugins do
+  gem "github-pages", group: :jekyll_plugins
+  gem "jekyll-include-cache", group: :jekyll_plugins
+  gem "minimal-mistakes-jekyll"
   gem "jekyll-feed"
   gem "jekyll-sitemap"
   gem "jekyll-seo-tag"
@@ -11,5 +14,5 @@ group :jekyll_plugins do
   gem "jekyll-responsive-image"
   gem "jekyll-admin"
   gem "jekyll-toc"
-  gem "minimal-mistakes-jekyll"
+  
 end
