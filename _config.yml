@@ -1,8 +1,32 @@
-title: krek-os dot com
+# config file for website.
+#  See https://jekyllrb.com/docs/configuration/ for more details.
+#  The settings below are used by GitHub Pages, and are also used as defaults for the Jekyll Admin plugin.
+
+locale: "en-AU"
+
+title: krek-os
+name: Jadon Krekos
+
 url: "https://krek-os.github.io"
 baseurl: ""
 remote_theme: "mmistakes/minimal-mistakes@4.27.1"
 
+# Site Footer
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/krek-os"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/jadonkrekos/"
+    - label: "Bitbucket"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://www.instagram.com/jadonkrekos/"
+
+
+# plugins 
 plugins:
   - jekyll-include-cache
   - jekyll-feed
