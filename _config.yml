@@ -1,8 +1,10 @@
 title: krek-os dot com
 url: "https://krek-os.github.io"
 baseurl: ""
+remote_theme: "mmistakes/minimal-mistakes@4.27.1"
 
 plugins:
+  - jekyll-include-cache
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
