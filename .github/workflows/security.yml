@@ -1,0 +1,54 @@
+name: Security and Vulnerability Scans
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  schedule:
+    - cron: '0 2 * * 1' # Runs every Monday at 2am UTC
+
+jobs:
+  bundler-audit:
+    name: Check Ruby Gem Vulnerabilities
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+      - name: Install dependencies
+        run: |
+          gem install bundler-audit
+          bundle install
+      - name: Run bundler-audit
+        run: bundler-audit check --update
+
+  codeql:
+    name: CodeQL Analysis
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: ruby
+      - name: Autobuild
+        uses: github/codeql-action/autobuild@v3
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
+
+  trufflehog:
+    name: Secret Scanning with TruffleHog
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run TruffleHog
+        uses: trufflesecurity/trufflehog@v3.75.0
+        with:
+          scanArguments: --no-update --fail
