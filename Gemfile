@@ -13,5 +13,6 @@ group :jekyll_plugins do
   gem "jekyll-imagemagick"
   gem "jekyll-admin"
   gem "jekyll-toc"
+  gem "nokogiri", ">= 1.19.1"
   
 end
