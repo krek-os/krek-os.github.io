@@ -1,0 +1,20 @@
+name: Scheduled Build
+
+on:
+  schedule:
+    - cron: '0 3 * * 0' # Every Sunday at 3am UTC
+
+jobs:
+  build:
+    name: Scheduled Jekyll Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+      - name: Install dependencies
+        run: bundle install
+      - name: Build site
+        run: bundle exec jekyll build
