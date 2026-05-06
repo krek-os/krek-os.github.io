@@ -332,6 +332,7 @@ DEPENDENCIES
   jekyll-sitemap
   jekyll-toc
   minimal-mistakes-jekyll
+  nokogiri (>= 1.19.1)
   webrick
 
 BUNDLED WITH
